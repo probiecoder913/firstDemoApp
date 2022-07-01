@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+    <div class="form-group  row">
+    <label for="name">Name</label>
+    <input type="text" placeholder="Full Name" class="form-control form-control-sm"  name="name" ngModel id="name" required ></div>
+    
+    <div class="form-group  row">
+    <label for="rollno">Roll Number</label>
+    <input type="text" placeholder=" Roll no" class="form-control form-control-sm" ngModel name="rollno" id="rollno"  required ></div>
+    
+    <div class="form-group  row">
+    <label for="email">E-mail</label>
+    <input type="email" placeholder="username@example.com" class="form-control form-control-sm"  ngModel email name="email" id="email" required >
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small></div>
+    
+        <div>
+            <label for="gender" >Gender</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" ngModel name="gender" id="inlineRadio1" value="Male">
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" ngModel name="gender" id="inlineRadio2" value="Female">
+                <label class="form-check-label" for="inlineRadio2">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" ngModel name="gender" id="inlineRadio2" value="Others">
+                <label class="form-check-label" for="inlineRadio2">Others</label>
+              </div>
+            </div>
+    
+    <div class="form-group">
+    <label for="course">Course</label>
+    <select ngModel name="course" class="form-control form-control-sm" id="course" required >
+        <option value="Btech">Btech</option>
+        <option value="BPharm">BPharm</option>
+        <option value="Bio Tech">Bio Tech</option>
+        <option value="B Sc">B Sc</option>
+    </select>
+       </div>
+    <button type="submit" [disabled]="!form.valid" class="btn-primary btn"> Add</button>
+</form>

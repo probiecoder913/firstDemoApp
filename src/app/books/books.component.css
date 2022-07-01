@@ -1,0 +1,14 @@
+div.content{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+div.details{
+    max-width: 40%;
+}
+table{
+    margin: 20px;
+    width: 100%;
+    padding: 20px;
+}

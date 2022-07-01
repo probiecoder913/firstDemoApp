@@ -1,0 +1,16 @@
+.newbook{
+    margin-top: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid;
+    padding: 30px;
+}
+input{
+    width: 100%;
+}
+input.ng-touched.ng-invalid{
+    border:red 1px solid;
+}

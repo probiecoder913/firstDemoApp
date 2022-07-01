@@ -1,0 +1,27 @@
+<div class="content">
+  <div class="details">
+    <h2>Books</h2>
+    <ul>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>ISBN</th>
+          <th>Availability</th>
+          <th>Location</th>
+        </tr>
+        <tr *ngFor="let book of books">
+          <td>{{book.name}}</td>
+          <td>{{book.isbn}}</td>
+          <td *ngIf="book.availability; else notAvailable"> <span [ngStyle]="{'color':'green'}">Available</span></td>
+          <td>{{book.location}}</td>
+        </tr>
+      </table>
+    </ul>
+    <ng-template #notAvailable><span [ngStyle]="{'color':'red'}">Not-Available</span></ng-template>
+    <button [routerLink]="['add-book']" id="new">Add Book</button>
+  </div>
+  <div class="form">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

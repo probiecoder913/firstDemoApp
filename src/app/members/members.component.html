@@ -1,0 +1,29 @@
+<div class="content">
+  <div class="details">
+    <h2>Members</h2>
+    <h3>Active Members</h3>
+    <ul>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Roll no</th>
+          <th>Email</th>
+          <th>gender</th>
+        </tr>
+        <tr *ngFor="let member of members">
+          <td>{{member.name}}</td>
+          <td>{{member.course}}</td>
+          <td>{{member.rollno}}</td>
+          <td>{{member.email}}</td>
+          <td>{{member.gender}}</td>
+        </tr>
+      </table>
+    </ul>
+    <button [routerLink]="['add-members']">Add new</button>
+
+  </div>
+  <div class="form">
+    <router-outlet></router-outlet>
+  </div>
+</div>
